@@ -1,0 +1,50 @@
+services:
+  server1:
+    build: .
+    container_name: server1
+    environment:
+      - SERVER_NAME=server1
+    command: ["java", "server.ServerApp", "Server1"]
+
+  server2:
+    build: .
+    container_name: server2
+    environment:
+      - SERVER_NAME=server2
+    depends_on:
+      - server1
+    command: ["java", "server.ServerApp", "Server2"]
+
+  server3:
+    build: .
+    container_name: server3
+    environment:
+      - SERVER_NAME=server3
+    depends_on:
+      - server2
+    command: ["java", "server.ServerApp", "Server3"]
+
+  server4:
+    build: .
+    container_name: server4
+    environment:
+      - SERVER_NAME=server4
+    depends_on:
+      - server3
+    command: ["java", "server.ServerApp", "Server4"]
+
+  server5:
+    build: .
+    container_name: server5
+    environment:
+      - SERVER_NAME=server5
+    depends_on:
+      - server4
+    command: ["java", "server.ServerApp", "Server5"]
+
+  client:
+    build: .
+    container_name: client
+    depends_on:
+      - server5
+    command: ["java", "client.Client", "Server1"]
