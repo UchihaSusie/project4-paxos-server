@@ -1,3 +1,13 @@
+## Project Series
+
+This project is the final part of a four-step learning journey.  
+You can check out the earlier projects in this series:
+
+1. [Project 1: Single Server](https://github.com/UchihaSusie/project1-single-server)
+2. [Project 2: Multi Thread](https://github.com/UchihaSusie/project2-multi-thread)
+3. [Project 3: Multi Servers](https://github.com/UchihaSusie/project3-multi-server)
+4. **[Project 4: Paxos Server (this repo)](https://github.com/UchihaSusie/project4-paxos-server)**
+
 # Running on local machine with Docker Compose
 
 Server will run on port 1099.  
